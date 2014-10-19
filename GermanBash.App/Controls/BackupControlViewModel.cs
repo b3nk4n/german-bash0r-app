@@ -17,7 +17,7 @@ namespace GermanBash.App.Controls
         private IFavoriteManager _favoriteManager;
 
         public BackupControlViewModel()
-            : base("000000004412D53A", AppResources.ApplicationTitle)
+            : base("000000004412DE8A", AppResources.ApplicationTitle)
         {
             _favoriteManager = App.Injector.Get<IFavoriteManager>();
         }
