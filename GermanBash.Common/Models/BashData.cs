@@ -229,7 +229,7 @@ namespace GermanBash.Common.Models
         {
             get
             {
-                return new Uri(string.Format(@"http://www.ibash.de/zitat_{0}.html", Id), UriKind.Absolute);
+                return new Uri(string.Format(@"http://german-bash.org/{0}", Id), UriKind.Absolute);
             }
         }
     }

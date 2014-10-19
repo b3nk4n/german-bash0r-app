@@ -185,6 +185,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Ads\Photo-Info_adduplex_german.png" />
     <Content Include="Assets\AppBar\appbar.heart.outline.png" />
     <Content Include="Assets\AppBar\appbar.heart.png" />
     <Content Include="Assets\AppBar\back.png" />

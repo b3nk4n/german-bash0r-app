@@ -12,6 +12,7 @@ using Microsoft.Phone.Tasks;
 using GermanBash.Common;
 using PhoneKit.Framework.Storage;
 using System.Windows;
+using GermanBash.App.Helpers;
 
 namespace GermanBash.App.Pages
 {
@@ -119,6 +120,11 @@ namespace GermanBash.App.Pages
                 // TODO: handle error?
             }
 
+            if (LicenceEasterEggHelper.IsAwesomeEditionUnlocked())
+            {
+                AdContainer.Visibility = System.Windows.Visibility.Collapsed;
+            }
+
             ShowBashInfoBar.Begin();
         }
 
@@ -208,6 +214,27 @@ namespace GermanBash.App.Pages
             {
                 Clipboard.SetText((string)menuItem.Tag);
             }
+        }
+
+        private void RemoveAdsTapped(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            if (!LicenceEasterEggHelper.IsAwesomeEditionUnlocked())
+            {
+                NavigationService.Navigate(new Uri("/Pages/InAppStorePage.xaml", UriKind.Relative));
+            }
+        }
+
+        private void AdReceived(object sender, EventArgs e)
+        {
+            StaticBannerImage.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        private void PhotoInfoTapped(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            var task = new MarketplaceDetailTask();
+            task.ContentIdentifier = "ac39aa30-c9b1-4dc6-af2d-1cc17d9807cc";
+            task.ContentType = MarketplaceContentType.Applications;
+            task.Show();
         }
     }
 }
