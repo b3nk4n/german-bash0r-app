@@ -1,0 +1,18 @@
+﻿<ViewModels:CommentsViewModel xmlns:ViewModels="clr-namespace:GermanBash.App.ViewModels" xmlns:Models="clr-namespace:GermanBash.App.Models;assembly=GermanBash.Common">
+	<ViewModels:CommentsViewModel.BashComments>
+		<Models:BashComments>
+			<Models:BashComments.Comments>
+				<Models:BashComment Nick="Aaaaa" Text="Class adipiscing fasd fa sdf asdf asd fas dfa sdf asd fas dfa sdf asd fa sdf asdf asd fas dfa sdf" Timestamp="06.10.2014 21:31"/>
+                <Models:BashComment Nick="Bbbbb" Text="Aptent etiam duis fusce nunc" Timestamp="06.10.2014 21:31"/>
+                <Models:BashComment Nick="Ccccc" Text="Parturient amet lectus" Timestamp="06.10.2014 21:31"/>
+                <Models:BashComment Nick="Ddddd" Text="Eleifend ante vivamus est" Timestamp="06.10.2014 21:31"/>
+                <Models:BashComment Nick="Eeeee" Text="Diam aliquet litora as dfa sf sadf as dfa sdf asdf asd fas dfsa f asdf " Timestamp="06.10.2014 21:31"/>
+                <Models:BashComment Nick="Fffff" Text="Mattis blandit inceptos parturient mus" Timestamp="06.10.2014 21:31"/>
+                <Models:BashComment Nick="Ggggg" Text="Per vestibulum augue" Timestamp="06.10.2014 21:31n"/>
+                <Models:BashComment Nick="Hhhhh" Text="Cubilia enim" Timestamp="06.10.2014 21:31"/>
+                <Models:BashComment Nick="Iiiii" Text="Placerat fames erat" Timestamp="06.10.2014 21:31"/>
+                <Models:BashComment Nick="Jjjjj" Text="Pulvinar sagittis nibh" Timestamp="06.10.2014 21:31"/>
+			</Models:BashComments.Comments>
+		</Models:BashComments>
+	</ViewModels:CommentsViewModel.BashComments>
+</ViewModels:CommentsViewModel>
