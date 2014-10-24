@@ -44,7 +44,7 @@
 
         <!--TitlePanel enthält den Namen der Anwendung und den Seitentitel-->
         <Grid Background="{StaticResource ThemeBrushGrayDark}" Margin="0,0,0,12">
-            <TextBlock Text="{Binding Path=LocalizedResources.InAppStoreTitle, Source={StaticResource LocalizedStrings}}" Style="{StaticResource ThemeTextTitleStyle}" HorizontalAlignment="Center" />
+            <TextBlock Text="{Binding Path=LocalizedResources.InAppStoreTitle, Source={StaticResource LocalizedStrings}}" Style="{StaticResource ThemeTextTitleStyle}" HorizontalAlignment="Center" Margin="0,-2,0,2"/>
         </Grid>
 
         <!--ContentPanel - zusätzliche Inhalte hier platzieren-->

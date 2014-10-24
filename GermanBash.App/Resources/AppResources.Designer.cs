@@ -178,6 +178,15 @@ namespace GermanBash.App.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die settings ähnelt.
+        /// </summary>
+        public static string AppBarSettings {
+            get {
+                return ResourceManager.GetString("AppBarSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die share... ähnelt.
         /// </summary>
         public static string AppBarShare {
@@ -223,7 +232,7 @@ namespace GermanBash.App.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die 1.0 ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 1.3 ähnelt.
         /// </summary>
         public static string ApplicationVersion {
             get {
@@ -807,6 +816,87 @@ namespace GermanBash.App.Resources {
         public static string SearchTermHint {
             get {
                 return ResourceManager.GetString("SearchTermHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Background color ähnelt.
+        /// </summary>
+        public static string SettingsBackgroundColor {
+            get {
+                return ResourceManager.GetString("SettingsBackgroundColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Background image ähnelt.
+        /// </summary>
+        public static string SettingsBackgroundImage {
+            get {
+                return ResourceManager.GetString("SettingsBackgroundImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Background image opacity ähnelt.
+        /// </summary>
+        public static string SettingsBackgroundOpacity {
+            get {
+                return ResourceManager.GetString("SettingsBackgroundOpacity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Lock screen ähnelt.
+        /// </summary>
+        public static string SettingsLockScreen {
+            get {
+                return ResourceManager.GetString("SettingsLockScreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Preview ähnelt.
+        /// </summary>
+        public static string SettingsPreview {
+            get {
+                return ResourceManager.GetString("SettingsPreview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Clear Image ähnelt.
+        /// </summary>
+        public static string SettingsRemoveImage {
+            get {
+                return ResourceManager.GetString("SettingsRemoveImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select color... ähnelt.
+        /// </summary>
+        public static string SettingsSelectColor {
+            get {
+                return ResourceManager.GetString("SettingsSelectColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select image... ähnelt.
+        /// </summary>
+        public static string SettingsSelectImage {
+            get {
+                return ResourceManager.GetString("SettingsSelectImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Settings ähnelt.
+        /// </summary>
+        public static string SettingsTitle {
+            get {
+                return ResourceManager.GetString("SettingsTitle", resourceCulture);
             }
         }
         

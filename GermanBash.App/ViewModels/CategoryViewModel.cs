@@ -211,6 +211,7 @@ namespace GermanBash.App.ViewModels
                         var tmp = BashCollection.Contents.Data[position.Value];
                         BashCollection.Contents.Data[position.Value] = BashCollection.Contents.Data[index];
                         BashCollection.Contents.Data[index] = tmp;
+                        NotifyPropertyChanged("CurrentBashData");
                     }
                 }
             }

@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
-using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
 using GermanBash.Common.Models;
 using GermanBash.Common.Conversion;
 using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Data;
+using System.Windows.Media.Imaging;
+using PhoneKit.Framework.Core.Storage;
 
 namespace GermanBash.Common.Controls
 {
     public partial class LockQuoteControl : UserControl
     {
         private IndexToThicknessConverter _indexToThicknessConverter;
-        
+
         private static readonly SolidColorBrush WHITE = new SolidColorBrush(Colors.White);
         private static readonly SolidColorBrush GRAY = new SolidColorBrush(Colors.Gray);
         private static readonly SolidColorBrush DARK_GRAY = new SolidColorBrush(Colors.DarkGray);
@@ -27,13 +23,16 @@ namespace GermanBash.Common.Controls
         private const double FONT_SIZE = 26;
 
 
-        public LockQuoteControl(BashData bashData)
+        public LockQuoteControl(BashData bashData, Color backgroundColor, string backgroundPath, double opacity)
         {
             InitializeComponent();
             _indexToThicknessConverter = new IndexToThicknessConverter();
 
             // generate UI
             CreateBashQuotes(bashData.QuoteItems);
+
+            SetBackgroundColor(backgroundColor);
+            SetBackgroundImage(backgroundPath, opacity);
         }
 
         private void CreateBashQuotes(List<BashQuoteItem> bashQuoteItems)
@@ -68,7 +67,7 @@ namespace GermanBash.Common.Controls
             StackPanel innerStackPanel = new StackPanel();
             innerStackPanel.Margin = new Thickness(6);
             innerBorder.Child = innerStackPanel;
-            
+
             TextBlock text = new TextBlock();
             text.TextWrapping = TextWrapping.Wrap;
             text.TextAlignment = TextAlignment.Center;
@@ -109,7 +108,7 @@ namespace GermanBash.Common.Controls
             StackPanel innerStackPanel = new StackPanel();
             innerStackPanel.Margin = new Thickness(0, 6, 0, 6);
             innerBorder.Child = innerStackPanel;
-            
+
             TextBlock text = new TextBlock();
             text.TextWrapping = TextWrapping.Wrap;
             text.Margin = new Thickness(12, 0, 12, 0);
@@ -150,6 +149,33 @@ namespace GermanBash.Common.Controls
             };
             BindingOperations.SetBinding(pathLeft, Path.DataProperty, b);
             return pathLeft;
+        }
+
+        private void SetBackgroundColor(Color backgroundColor)
+        {
+            this.BackgroundColor.Fill = new SolidColorBrush(backgroundColor);
+        }
+
+        private void SetBackgroundImage(string imagePath, double opacity)
+        {
+            // check if the default image should be used.
+            if (imagePath == null)
+                return;
+
+            BitmapImage image = new BitmapImage();
+            using (var imageStream = StorageHelper.GetFileStream(imagePath))
+            {
+                // in case of a not successfully saved image
+                if (imageStream == null)
+                {
+                    BackgroundImage.Source = null;
+                    return;
+                }
+
+                image.SetSource(imageStream);
+                BackgroundImage.Source = image;
+                BackgroundImage.Opacity = opacity;
+            }
         }
     }
 }
