@@ -39,7 +39,7 @@ namespace GermanBash.App
         {
 #if !DEBUG
             // Initialize BugSense
-            BugSenseHandler.Instance.InitAndStartSession(new ExceptionManager(Current), RootFrame, "4fc0608a");
+            BugSenseHandler.Instance.InitAndStartSession(new ExceptionManager(Current), RootFrame, "0e59b816");
 #else
             // Globaler Handler für nicht abgefangene Ausnahmen.
             UnhandledException += Application_UnhandledException;
