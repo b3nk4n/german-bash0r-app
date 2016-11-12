@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Resources;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Navigation;
@@ -10,7 +9,6 @@ using GermanBash.App.Resources;
 using Ninject;
 using GermanBash.App.Modules;
 using PhoneKit.Framework.Support;
-using GermanBash.Common.Data;
 using GermanBash.App.ViewModels;
 using BugSense;
 using BugSense.Core.Model;

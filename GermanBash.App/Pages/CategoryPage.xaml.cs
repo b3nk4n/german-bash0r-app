@@ -10,7 +10,6 @@ using System.Windows.Controls;
 using System.Windows.Media.Animation;
 using Microsoft.Phone.Tasks;
 using GermanBash.Common;
-using PhoneKit.Framework.Storage;
 using System.Windows;
 using GermanBash.App.Helpers;
 

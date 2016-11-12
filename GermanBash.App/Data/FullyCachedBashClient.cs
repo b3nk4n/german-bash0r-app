@@ -2,9 +2,6 @@
 using GermanBash.Common.Models;
 using PhoneKit.Framework.Storage;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace GermanBash.App.Data
