@@ -232,7 +232,7 @@ namespace GermanBash.App.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die 1.3.1 ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 1.4.1 ähnelt.
         /// </summary>
         public static string ApplicationVersion {
             get {
